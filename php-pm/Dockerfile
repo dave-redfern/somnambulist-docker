@@ -87,7 +87,7 @@ RUN curl --silent --fail --location --retry 3 --output /tmp/ppm.phar --url https
     exit(1); \
   }" \
   && mv /tmp/ppm.phar /usr/bin/ppm.phar \
-  && ln -s /usr/bin/ppm /usr/bin/ppm.phar \
+  && ln -s /usr/bin/ppm.phar /usr/bin/ppm \
   && chmod 755 /usr/bin/ppm \
   && ppm --ansi --version --no-interaction
 
