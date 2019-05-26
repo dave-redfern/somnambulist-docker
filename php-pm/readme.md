@@ -27,7 +27,7 @@ The base image is around 50MB due to git and ncurses-terminfo being required by 
 Import from this image and add additional setup steps to build your app. For example:
 
 ```dockerfile
-FROM somnambulist/php-pm-alpine
+FROM somnambulist/php-alpine:ppm
 
 RUN apk --update add ca-certificates \
     && apk update \

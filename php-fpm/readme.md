@@ -23,7 +23,7 @@ Note:
 Import from this image and add additional setup steps to build your app. For example:
 
 ```dockerfile
-FROM somnambulist/php-fpm-alpine
+FROM somnambulist/php-alpine:fpm
 
 RUN apk --update add ca-certificates \
     && apk update \
