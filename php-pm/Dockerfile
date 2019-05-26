@@ -77,9 +77,9 @@ RUN curl --silent --fail --location --retry 3 --output /tmp/installer.php --url 
  && find /tmp -type d -exec chmod -v 1777 {} +
 
 # setup php-pm -- shamelessly borrowed from the above composer code :)
-RUN curl --silent --fail --location --retry 3 --output /tmp/ppm.phar --url https://github.com/dave-redfern/somnambulist-phppm-phar/releases/download/2.0.0/ppm.phar \
+RUN curl --silent --fail --location --retry 3 --output /tmp/ppm.phar --url https://github.com/dave-redfern/somnambulist-phppm-phar/releases/download/2.0.1/ppm.phar \
   && php -r " \
-  \$signature = 'd8b0fe95baf50df0907cd9eacdde3e3c84105bdd72cc0fa5f3326d2ebfe21a88e1dc247fdf0d7ff69b4ac98b61e03e66'; \
+  \$signature = '54064b81d8390c60d1fa1fcf6964974728c176c3ec7a587a192384fd379f2668ed41ba047c7b6b6e15a073f3548577b9'; \
   \$hash = hash_file('sha384', '/tmp/ppm.phar'); \
   if (!hash_equals(\$signature, \$hash)) { \
     unlink('/tmp/ppm.phar'); \
