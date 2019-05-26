@@ -4,15 +4,9 @@ An Alpine 3.9 based container geared for running more standard web apps e.g. Sym
 
  * composer
 
-PHP is installed with:
+PHP is installed using the php-base image: [php-base](https://github.com/dave-redfern/docker-php-base) with:
 
- * igbinary
- * opcache / apcu
- * xml libs
- * curl
- * iconv, mbstring, gettext, intl
- 
-And a few others.
+ * fpm
 
 Note:
 

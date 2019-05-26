@@ -11,6 +11,7 @@ An alpine tailored php-fpm container
 Includes:
 
  * composer
+ * fpm
 
 ## php-pm (tag: ppm, ppm-X.Y.Z)
 

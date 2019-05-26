@@ -5,22 +5,13 @@ An Alpine 3.9 based container geared for running [php-pm](https://github.com/php
  * composer
  * ppm.phar (as ppm, from https://github.com/dave-redfern/somnambulist-phppm-phar)
 
-PHP is installed with:
+PHP is installed using the php-base image: [php-base](https://github.com/dave-redfern/docker-php-base) with:
 
- * pcntl / posix and the memory extensions
- * igbinary
- * opcache / apcu
- * xml libs
- * curl
- 
-And a few others.
+ * cgi, pcntl, posix and the shm extensions.
 
 Note:
 
- * intl has not been included to reduce the base image size
  * only sqlite has been loaded, add MySQL / Postgres if you need them
- 
-The base image is around 50MB due to git and ncurses-terminfo being required by several packages.
 
 ## Intended Usage
 
@@ -34,7 +25,6 @@ RUN apk --update add ca-certificates \
     && apk upgrade \
     && apk --no-cache add -U \
     php7-pdo-pgsql \
-    php7-intl \
     && rm -rf /var/cache/apk/* /tmp/*
 
 WORKDIR /app
