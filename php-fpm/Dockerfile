@@ -4,7 +4,7 @@
 # Bundles composer
 #
 
-FROM somnambulist/php-base:latest
+FROM somnambulist/php-base:7.2-latest
 
 RUN apk --update add ca-certificates \
     && apk update \
